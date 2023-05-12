@@ -1,0 +1,98 @@
+.container{
+    margin-top: 5px;
+    border-radius: 5rem;
+    box-shadow: 0 0 .2rem rgba(11, 14, 182, 0.461), 0 0 .2rem rgba(11, 14, 182, 0.461), 0 0 2rem rgba(11, 14, 182, 0.461);
+    display: flex;
+    align-items: center;
+    color: #fff;
+    top: 0%;
+    right: 0%;
+}
+/* .container {
+    background-image: url('https://images3.alphacoders.com/812/812062.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  } */
+
+.detail {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.detail div{
+    width: fit-content;
+    margin-top: 3rem;
+    padding-right: 8rem;
+}
+
+.container div h1{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    font-size: 2.5rem;
+    color: black;
+    text-shadow: 0 0 0.2rem rgba(11, 14, 182, 0.461), 0 0 0.1rem rgba(11, 14, 182, 0.461) , 0 0 1rem rgba(11, 14, 182, 0.461);
+}
+
+.container div label{
+    width: fit-content;
+    margin-left: 3rem;
+    font-size: 1.5rem;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 0.8rem #0305819b, 0 0 0.6rem #0305819b, 0 0 2rem #0305819b;
+    border-radius: 0.3rem;
+    font-family: 'Rubik Glitch', cursive;
+}
+
+.container div p{
+    width: fit-content;
+    color: aliceblue;
+    font-family: 'Encode Sans', sans-serif;
+    margin-left: 9rem;
+    margin-bottom: 2rem;
+}
+
+.containerImg{
+    display: flex;
+    justify-content: center;
+}
+.container div img{
+    width: 20rem;
+    height: 20rem;
+    border-radius: 9999rem;
+    overflow: hidden;
+    transition: .8s;
+}
+.container div img:hover{
+    transform: scale(1.05);
+    color: white;
+    background-color: rgba(11, 14, 182, 0.461);
+    box-shadow: 0 0 1rem rgba(11, 14, 182, 0.461), 0 0 4rem rgba(11, 14, 182, 0.461), 0 0 8rem rgba(11, 14, 182, 0.461);
+}
+
+.link{
+    color: aliceblue;
+    text-decoration: none;
+}
+
+.container div button{
+    margin-left: 1rem;
+    border-radius: 5rem;
+    margin-top: .5rem;
+    width: 5rem;
+    height: 2.2rem;
+    background: linear-gradient(rgba(81, 150, 110, 0.461), rgba(0, 0, 0, 0));
+    border: transparent;
+
+    overflow: hidden;
+    transition: 300ms;
+}
+.container div button:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    color: white;
+    background-color: #33ff0044;
+    box-shadow: 0 0 1rem rgba(11, 14, 182, 0.461), 0 0 4rem rgba(11, 14, 182, 0.461), 0 0 8rem rgba(11, 14, 182, 0.461);
+}
