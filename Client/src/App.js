@@ -30,27 +30,35 @@ function App() {
    //       navigate('/home');
    //    }
    // }
-   const login =(userData) => {
-      const { email, password } = userData;
-      const URL = 'http://localhost:3001/rickandmorty/login/';
-      axios(URL + `?email=${email}&password=${password}`)
-      .then(({ data }) => {
+   const login = async (userData) => {
+
+      try {
+         const { email, password } = userData;
+         const URL = 'http://localhost:3001/rickandmorty/login/';
+         const {data} = await axios(URL + `?email=${email}&password=${password}`)
+         
          const { access } = data;
          setAccess(access);
          access && navigate('/home');
-      });
+      } catch (error) {
+         console.log(error.message);
+      }
    }
    
-   const onSearch = (id) => {
-      axios(`http://localhost:3001/rickandmorty/character/${id}`)
-      .then(({ data }) => {
+   const onSearch = async (id) => {
+      try {
+         const {data} = await axios(`http://localhost:3001/rickandmorty/character/${id}`)
+         
          if (data.name) {
             setCharacters((oldChars) => [...oldChars, data]);
          } else {
             alert('¡No hay personajes con este ID!');
          }
-      });
-   }
+      } catch (error) {
+         console.log(error);
+      }
+   };
+
    const onClose = (id) =>{
       const charactersFiltered = characters.filter(character =>
          character.id !== Number(id))
